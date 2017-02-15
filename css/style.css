@@ -1,0 +1,68 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  max-width: 1366px;
+  
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: "Roboto", Arial, sans-serif;
+  color: #242424;
+}
+
+/*
+font-family: 'Roboto', sans-serif;
+font-family: 'Roboto Slab', serif;
+*/
+
+.visually-hidden {
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.main-header,
+main,
+.main-footer {
+  background-color: rgba(0, 128, 0, .3);
+}
+
+.main-header>*,
+main>*,
+.main-footer>* {
+  background-color: rgba(218, 165, 32, .3);
+}
+
+.main-header>*>*,
+main>*>*,
+.main-footer>*>* {
+  background-color: rgba(128, 0, 0, .2);
+}
