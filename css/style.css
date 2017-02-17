@@ -2,14 +2,17 @@ html,
 body {
   margin: 0;
   padding: 0;
+	
+	background-color: #999999
 }
 
 body {
+	min-width: 800px;
   max-width: 1366px;
   
   font-weight: 300;
   font-size: 14px;
-  line-height: 18px;
+  line-height: 17px;
   font-family: "Roboto", Arial, sans-serif;
   color: #242424;
 }
@@ -20,31 +23,64 @@ font-family: 'Roboto Slab', serif;
 */
 
 .visually-hidden {
-  display: none;
+  position: absolute;
+	
+	width: 0;
+	height: 0;
+	
+	clip: rect(0 0 0 0);
 }
 
 .main-header {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding: 46px 166px 117px 170px;
+	box-sizing: border-box;
+	width: 100%;
+	padding: 46px 10.8% 117px 12.45%;
+  
+  background-color: #4a454b;
 }
 
 .main-navigation {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-between;
-	width: 1030px;
-	height: 62px;
+	width: 100%;
+	min-height: 62px;
 	margin-bottom: 118px;
 }
 
 .logo {
+	width: 230px;
+	height: 62px;
 	margin: 0;
 	padding: 0;
 }
 
+.site-navigation {
+	display: flex;
+	max-width: 63.73%;
+	margin: 0;
+	padding: 0;
+	
+	list-style: none;
+}
+
+.site-navigation a {
+  display: block;
+  padding: 25px 20px 22px;
+  
+  font-weight: 100;
+  font-size: 15px;
+  line-height: 15px;
+  color: #ffffff;  
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
 .timer {
-	width: 970px;
+	width: 92.5%;
 	height: 198px;
 }
 
@@ -54,68 +90,121 @@ font-family: 'Roboto Slab', serif;
 	align-items: center;
 }
 
-.subscribe-title {
-	margin: 0;
-}
-
 .subscribe {
 	display: flex;
 	align-items: flex-end;
-	min-height: 496px;
-	padding: 51px 166px 0px 170px;
+	box-sizing: border-box; 
+	width: 100%;
+	min-height: 545px;
+	padding: 51px 12.15% 0px 12.45%; 
+    
+  background-image: linear-gradient(175deg, #4a454b 34.3%, #ffffff 34.5%)
 }
 
-.welcome {
-	width: 530px;
-	margin-right: 70px;
+.subscribe-column-left {
+	width: 51.45%;
+	margin-right: 6.8%;
+}
+
+.subtitle {
+	margin: 0;
+  margin-bottom: 17px;
+  
+  font-weight: 900;
+  font-size: 50px;
+  line-height: 50px;
+}
+
+.text {
+  margin-bottom: 16px;
 }
 
 .form-subscribe {
-	width: 430px;
+	width: 41.75%;
 	margin-bottom: 15px
 }
 
 .features {
-	padding: 125px 166px 94px 170px;
+	box-sizing: border-box;
+	width: 100%;
+	padding: 112px 12.15% 94px 12.45%;
+}
+
+.features-list {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	
+	list-style: none;
+}
+
+.features-list li {
+	width: 297px;
+	min-height: 375px;
+	
+	text-align: center;
 }
 
 .timetable {
+	width: 75.4%;
 	
+	border-collapse: collapse;
+}
+
+.timetable th,
+.timetable td {
+	padding: 26px 30px;
+}
+
+.timetable th:first-of-type {
+	width: 22.33%;
+}
+
+.timetable td:last-of-type {
+	width: 12.62%;
 }
 
 .about-timetable {
-	max-width: 830px;
-	padding-right: 264px;
-	padding-left: 270px;
+	box-sizing: border-box;
+	width: 100%;
+	padding-right: 19.33%;
+	padding-left: 19.77%;
 	margin-top: 40px;
 	margin-bottom: 81px;
 }
 
 .reward {
-	padding: 250px 166px 176px 500px;
+	box-sizing: border-box;
+	width: 100%;
+	padding: 250px 12.15% 176px 36.6%;
 }
 
 .reward-text {
-	max-width: 700px;
+	width: 100%;
 }
 
 .speakers {
-	display: flex;
-	flex-direction: column;
-	padding: 144px 196px 137px 200px;
+	box-sizing: border-box;	
+	width: 100%;
+	padding: 144px 14.35% 137px 14.64%;
 }
 
 .speakers-list {
 	display: flex;
+	width: 104%;
 	flex-direction: row;
-	justify-content: space-between;
 	flex-wrap: wrap;
+	justify-content: space-between;
 }
 
 .speaker-card,
 .stars {
+	flex-grow: 1;
 	width: 296px;
 	min-height: 296px;
+	margin-right: 3.8%;
 	margin-bottom: 41px;
 	
 	background-color: green;
@@ -125,70 +214,103 @@ font-family: 'Roboto Slab', serif;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding: 172px 366px 127px 370px;
+	box-sizing: border-box;
+	width: 100%;
+	padding: 172px 16.8% 127px 17.08%;
+}
+
+.sponsors-title,
+.sponsors-text {
+	width: 100%;
 }
 
 .our-sponsors {
 	display: flex;
+	justify-content: center;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	
+	list-style: none;
 }
 
+.our-sponsors li {
+}
+
+.our-sponsors a {
+	display: block;
+	min-height: 45px;
+	padding-right: 42px;
+	padding-left: 42px;
+}
+
+.sponsor:nth-of-type(3) a {
+	padding-top: 30px;
+	padding-bottom: 0;
+}
 
 .past-events {
-	padding-top: 116px;
-	padding-right: 96px;
-	padding-bottom: 93px;
-	padding-left: 100px;
+	box-sizing: border-box;
+	width: 100%;
+	padding: 116px 7.03% 93px 7.32%;
+	
+	text-align: center;
 }
 
+.past-events subtitle,
 .past-events-text {
 	max-width: 600px;
+	
+	text-align: left;
 }
 
 .gellery {
 	display: flex;
 	flex-wrap: wrap;
-	max-width: 1170px;
+	max-width: 100%;
 	min-height: 784px;
 	margin-bottom: 96px;
 }
 
+.gellery img {
+	flex-grow: 1;
+}
+
 .gellery img:nth-of-type(4n+1) {
-	width: 600px;
+	width: 590px;
 	height: 416px;
 	
 	background-color: #3d6ed2;
 }
 
 .gellery img:nth-of-type(4n+2) {
-	width: 570px;
+	width: 560px;
 	height: 416px;
 	
 	background-color: #90d23d;
 }
 
 .gellery img:nth-of-type(4n+3) {
-	width: 500px;
+	width: 490px;
 	height: 368px;
 	
 	background-color: #ff9d00;
 }
 
 .gellery img:nth-of-type(4n) {
-	width: 670px;
+	width: 660px;
 	height: 368px;
 	
 	background-color: #e0652a;
 }
 
 .past-events .btn {
-	display: block;
+	display: inline-block;
 	width: 200px;
-	margin-right: auto;
-	margin-left: auto;
 }
 
 .map {
-	width: 1366px;
+	width: 100%;
 	height: 660px;
 	
 	background-color: #999999;
@@ -197,27 +319,31 @@ font-family: 'Roboto Slab', serif;
 .contact {
 	position: absolute;
 	top: -595px;
+	left: 14.66%;
 	
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
-	width: 970px;
-	height: 530px;
-	padding: 59px 70px 53px 100px;
 	box-sizing: border-box;
+	width: 71%;
+	height: 530px;
+	padding: 59px 7.2% 53px 10.31%;
 }
 
-.address {
+.contact-column-left {
 	width: 270px;
 	min-height: 330px;
+	margin-right: 16.25%;
 }
 
 .contact-address {
+	
 }
 
 .form-message {
-	width: 400px;
+	flex-grow: 1;
+	width: 50%;
 	min-height: 420px;
 }
 
@@ -228,6 +354,8 @@ font-family: 'Roboto Slab', serif;
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
+	box-sizing: border-box;
+	width: 100%;
 	padding-top: 60px;
 	padding-bottom: 41px;
 }
@@ -253,11 +381,7 @@ font-family: 'Roboto Slab', serif;
 }
 
 
-.main-header,
-main,
-.main-footer {
-  background-color: rgba(0, 128, 0, .3);
-}
+
 
 .main-header>*,
 main>*,
