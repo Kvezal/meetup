@@ -88,6 +88,8 @@ font-family: 'Roboto Slab', serif;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	
+	background-color: #ffffff;
 }
 
 .subscribe {
@@ -127,7 +129,7 @@ font-family: 'Roboto Slab', serif;
 .features {
 	box-sizing: border-box;
 	width: 100%;
-	padding: 112px 12.15% 94px 12.45%;
+	padding: 127px 12.15% 98px 12.45%;
 }
 
 .features-list {
@@ -141,29 +143,117 @@ font-family: 'Roboto Slab', serif;
 }
 
 .features-list li {
+	position: relative;
+	
 	width: 297px;
-	min-height: 375px;
+	padding-top: 250px;
 	
 	text-align: center;
 }
 
+.features-title {
+	margin: 0;
+	margin-bottom: 19px;
+	
+	font-weight: 900;
+	font-size: 35px;
+	line-height: 35px;	
+}
+
+.features-text {
+	margin: 0;
+}
+
+.features-title::before {
+	content: "";
+	position: absolute;
+	top: 0;
+}
+
+.feature-community::before {	
+	width: 198px;
+	height: 211px;
+	
+	background-image: url(../img/icon-5.png);
+}
+
+.feature-talk::before {
+	width: 198px;
+	height: 198px;
+	
+	background-image: url(../img/icon-1.png)
+}
+
+.feature-stories::before {
+	width: 200px;
+	height: 201px;
+	
+	background-image: url(../img/icon-6.png);
+}
+
 .timetable {
 	width: 75.4%;
+	overflow: hidden;
 	
 	border-collapse: collapse;
+	font-weight: 400;
+	font-size: 22px;
+	line-height: 26px;
+	color: #ffffff;	
+	
+	border-radius: 15px;
+}
+
+.timetable tr:nth-of-type(odd) {
+	background-color: #4b4d4f;
+}
+
+.timetable tr:first-of-type {
+	Background-color: #a3cc40;	
+}
+
+.timetable tr:nth-of-type(even) {
+	background-color: #373737;
 }
 
 .timetable th,
 .timetable td {
-	padding: 26px 30px;
+	padding: 25px 30px;
 }
 
-.timetable th:first-of-type {
+.timetable th {	
+	padding: 23px 70px;
+	
+	font-weight: ;
+	font-size: 30px;
+	line-height: 32px;
+	text-align: left;
+}
+
+.timetable th:first-of-type,
+.timetable td:first-of-type {
 	width: 22.33%;
+	
+	text-align: center;
+}
+
+
+.timetable td:nth-of-type(2) {	
+	padding: 23px 70px;
 }
 
 .timetable td:last-of-type {
+	position: relative;
+	
 	width: 12.62%;
+	
+	font-size: 0;
+}
+
+.timetable td:last-of-type::before {
+	content: "";
+	position: absolute;
+	
 }
 
 .about-timetable {
@@ -383,6 +473,7 @@ font-family: 'Roboto Slab', serif;
 
 
 
+/*
 .main-header>*,
 main>*,
 .main-footer>* {
@@ -395,3 +486,4 @@ main>*>*,
 .main-footer>*>* {
   background-color: rgba(128, 0, 0, .2);
 }
+*/
