@@ -66,6 +66,19 @@ font-family: 'Roboto Slab', serif;
   color: #ffffff;  
   text-transform: uppercase;
   text-decoration: none;
+	
+	border-radius: 5px;
+	
+	transition: .5s;
+}
+
+.nav-link:hover {
+	background-color: rgba(255, 255, 255, 0.3);
+}
+
+.nav-link:active {
+	background-color: rgba(255, 255, 255, 0.5);
+	box-shadow: 0 0 5px 3px #90d23d;
 }
 
 .timer {
@@ -94,6 +107,14 @@ font-family: 'Roboto Slab', serif;
   background: linear-gradient(175deg, transparent 37.5%, #ffffff 37.7%);
 }
 
+.subscribe::before {
+	content: "";
+	
+	display: table;
+	width: 0;
+	height: 580px;
+}
+
 .subscribe-column-left {
 	width: 51.45%;
 	margin-right: 6.8%;
@@ -108,40 +129,111 @@ font-family: 'Roboto Slab', serif;
   line-height: 50px;
 }
 
-.text {
-  margin-bottom: 15px;
-}
-
 .form-subscribe {
+	position: relative;
 	box-sizing: border-box;
 	width: 41.75%;
 	margin-bottom: 15px;
-	padding: 3px 30px;
+	padding: 50px 30px 3px;
+	
+	border: 1px solid #dbdada;
+	box-shadow: inset 0 0 0 100px #90d23d;
+	border-radius: 100px;
+	
+	transition: .6s;
+}
+
+.form-subscribe:hover {
+	padding-top: 84px;
 	
 	background-color: #ffffff;
-	border: 1px solid #dbdada;
+	border-radius: 0;	
+	box-shadow: none;
 }
 
 .subscribe-title {
+	position: absolute;
+	top: 24px;
+	right: 5px;
+	left: 5px;
+	
 	margin: 0;
-	margin-top: 28px;
-	margin-bottom: 23px;
 	
 	font-weight: 700;
 	font-size: 30px;
 	line-height: 30px;
 	text-align: center;
+	color: #ffffff;
 }
 
-.form-subscribe p{
+.form-subscribe:hover .subscribe-title {
+	top: 28px;
+	right: auto;
+	left: auto;
+	
+	margin: 0;
+	
+	color: #000000;
+}
+
+.form-subscribe p {
+	position: relative;
+	margin-bottom: 0;
+	
+	font-size: 0;
+	line-height: 0;
+	padding: 0;
+	margin: 0;
+
+	visibility: hidden;
+	
+	transition: .3s;
+}
+
+.form-subscribe:hover p{
 	position: relative;
 	margin-bottom: 18px;
+	
+	font-size: 14px;
+	line-height: 17px;
+	
+	visibility: visible;
 }
 
 .form-subscribe input {
 	box-sizing: border-box;
+	width: 0%;
+	height: 0px;
+	padding-right: 0px;
+	padding-left: 0px;
+	
+	font-size: 0px;
+	
+	border: none;
+	
+	transition: .3s;
+}
+
+.form-subscribe:hover input {
+	box-sizing: border-box;
 	width: 100%;
 	height: 55px;
+	padding-right: 15px;
+	padding-left: 15px;
+	
+	font-size: 19px;
+	
+	border: 1px solid #bebebe;
+	border-radius: 5px;
+	outline: none;
+}
+
+.form-subscribe input:hover {
+	border: 1px solid #4a454b;
+}
+
+.form-subscribe input:focus {
+	border: 1px solid #90d23d;
 }
 
 .form-subscribe label {
@@ -150,12 +242,63 @@ font-family: 'Roboto Slab', serif;
 	left: 15px;
 	
 	font-weight: 300;
+	font-size: 0px;
+	line-height: 0px;
+	color: #bebebe;
+	
+	transition: .3s;
+}
+
+.form-subscribe:hover label {	
+	top: 17px;
+	left: 15px;
+	
+	font-weight: 300;
 	font-size: 19px;
 	line-height: 19px;
+	
+	transition: .3s;
+}
+
+.form-subscribe input:focus + label,
+.form-message input:focus + label {
+	font-size: 13px;
+	line-height: 13px;
+	color: #90d23d;
+	
+	transform: translateY(-30px);
+}
+
+.form-subscribe input:valid:not(:focus) + label,
+.form-message input:valid:not(:focus) + label {
+	font-size: 13px;
+	line-height: 13px;
 	color: #bebebe;
+	
+	transform: translateY(-30px);	
 }
 
 .form-subscribe .btn {
+	width: 100%;
+	min-height: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	
+	font-weight: 700;
+	font-size: 0px;
+	line-height: 0px;
+	color: #ffffff;
+	
+	background-color: #90d23d;
+	border: none;
+	border-radius: 5px;
+	outline: none;
+	visibility: hidden;
+	
+	transition: .3s;
+}
+
+.form-subscribe:hover .btn {
 	width: 100%;
 	min-height: 57px;
 	margin-top: 21px;
@@ -169,6 +312,21 @@ font-family: 'Roboto Slab', serif;
 	background-color: #90d23d;
 	border: none;
 	border-radius: 5px;
+	outline: none;
+	visibility: visible;
+	
+	transition: .3s;
+}
+
+.form-subscribe .btn:hover,
+.contact-column-left .btn:hover {
+	background-color: rgba(144, 210, 59, .7);
+}
+
+.form-subscribe .btn:active,
+.contact-column-left .btn:active {
+	background-color: rgba(144, 210, 59, .7);
+	box-shadow: inset 0px 0px 5px 2px rgba(74, 69, 75, 0.3);
 }
 
 .subscribe-text {
@@ -342,6 +500,8 @@ font-family: 'Roboto Slab', serif;
 	font-weight: 400;
 	text-decoration: none;
 	border-radius: 15px;
+	
+	transition: .3s;
 }
 
 .reward .btn {
@@ -356,6 +516,17 @@ font-family: 'Roboto Slab', serif;
 	
 	background-color: #90d23d;
 	border-radius: 16px;
+}
+
+.reward .btn:hover,
+.sponsors .btn:hover {
+	background-color: #c6d23d;
+}
+
+.reward .btn:active,
+.sponsors .btn:active {	
+	background-color: #d2bb3d;
+	box-shadow: 0 0 5px 1px #90d23d;
 }
 
 .speakers {
@@ -463,7 +634,10 @@ font-family: 'Roboto Slab', serif;
 	margin-right: 8px;
 	
 	background: url(../img/sprites.png) no-repeat;
+	border-radius: 50%;
 	box-shadow: 0 1px 1px rgba(0, 0, 0, .25) ;
+	
+	transition: .5s;
 }
 
 .speaker-social .social-btn-fb {	
@@ -582,10 +756,19 @@ font-family: 'Roboto Slab', serif;
 	max-width: 100%;
 	min-height: 784px;
 	margin-bottom: 96px;
+	
+	font-size: 0;
 }
 
 .gellery a {
+	display: flex;
 	flex-grow: 1;
+}
+
+.gellery img {
+	flex-grow: 1;
+	width: 100%;
+	margin: 0;
 }
 
 .wide.high {
@@ -676,6 +859,7 @@ font-family: 'Roboto Slab', serif;
 	text-transform: capitalize;
 	
 	background-color: #90d23d;
+	border: none;
 }
 
 .form-message {
@@ -685,10 +869,28 @@ font-family: 'Roboto Slab', serif;
 	min-height: 420px;
 }
 
-.form-message input {
+.form-message input {		
 	box-sizing: border-box;
 	width: 100%;
 	height: 55px;
+	padding-right: 15px;
+	padding-left: 15px;
+	
+	font-size: 19px;
+	
+	border: 1px solid #bebebe;
+	border-radius: 5px;
+	outline: none;
+	
+	transition: .3s;
+}
+
+.form-message input:hover {
+	border: 1px solid #4a454b;
+}
+
+.form-message input:focus {
+	border: 1px solid #90d23d;
 }
 
 .form-message textarea {
@@ -696,21 +898,51 @@ font-family: 'Roboto Slab', serif;
 	width: 100%;
 	height: 250px;
 	margin-top: 26px;
+	padding: 15px;
+	
+	border: 1px solid #bebebe;
+	border-radius: 5px;
+}
+
+.form-message textarea:hover {
+	border: 1px solid #4a454b;	
+}
+
+.form-message textarea:focus {
+	border: 1px solid #90d23d;	
 }
 
 .form-message label {
 	position: absolute;
 	top: 17px;
-	left: 20px;
+	left: 10px;
 	
 	font-weight: 300;
 	font-size: 19px;
 	line-height: 19px;
 	color: #bebebe;
+	
+	transition: .3s;
 }
 
 .form-message label:last-of-type {
-	top: 100px;
+	top: 95px;
+}
+
+.form-message textarea:focus + label {
+	font-size: 13px;
+	line-height: 13px;
+	color: #90d23d;
+	
+	transform: translateY(-30px);
+}
+
+.form-message textarea:valid:not(:focus) + label {
+	font-size: 13px;
+	line-height: 13px;
+	color: #bebebe;
+	
+	transform: translateY(-30px);	
 }
 
 .form-message .btn {
@@ -769,7 +1001,7 @@ font-family: 'Roboto Slab', serif;
 	margin-bottom: 15px;
 }
 
-.main-footer .social-btn {	
+.main-footer .social-btn {
 	width: 45px;
 	height: 45px;
 	margin-right: 15px;
@@ -778,6 +1010,17 @@ font-family: 'Roboto Slab', serif;
 	
 	border-radius: 50%;
 	background: url(../img/sprites.png) no-repeat;
+	
+	transition: .5s;
+}
+
+.main-footer .social-btn:hover {
+	box-shadow:	inset 0 0 0 30px rgba(0, 0, 0, 0.2);
+	
+}
+
+.main-footer .social-btn:active {
+	box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.2), inset 0 0 0 30px rgba(0, 0, 0, 0.1);
 }
 
 .main-footer .social-btn:last-of-type {
@@ -797,7 +1040,7 @@ font-family: 'Roboto Slab', serif;
 }
 
 .main-footer .social-btn-gl {
-	background-position: -150px 0;
+	background-position: -150px -1px;
 }
 
 .main-footer .social-btn-tb {

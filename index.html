@@ -48,25 +48,25 @@
             Get together with members of the Envato community to talk shop, trade war stories, make new friends and see the faces behind the avatars. Whether you’re an author on Envato Market, a client on Envato Studio, or a learner on Tuts+, you are invited!
           </p>
           <p>
-            It doesn’t matter as long as you have the motivation and interest to work at the envato and bring cookies to our event. Just kidding, but we don’t mind having more cookies! ;) Head over and fill up the sign up form here so that we can keep track of our guests. Don’t forget to register on our nvite page here too!</p>
+            It doesn’t matter as long as you have the motivation and interest to work at the envato and bring cookies to our event. Just kidding, but we don’t mind having more cookies! ;) Head over and fill up the sign up form here so that we can keep track of our guests. Don’t forget to register on our nvite page here too!
           </p>
         </div>        
         <form class="form-subscribe" action="" method="post">
           <h3 class="subscribe-title">Sign up for our event</h3>
           <p>
-          	<input type="text" name="subscribe-name" id="subscribe-name-field">
+          	<input type="text" name="subscribe-name" id="subscribe-name-field" required>
           	<label for="subscribe-name-field">Enter your name</label>
           </p>
           <p>
-          	<input type="email" name="subscribe-email" id="subscribe-email-field">
+          	<input type="email" name="subscribe-email" id="subscribe-email-field" required>
           	<label for="subscribe-email-field">Enter your email</label>
 					</p>
          	<p>
-          	<input type="tel" name="subscribe-tel" id="subscribe-tel-field">
+          	<input type="tel" name="subscribe-tel" id="subscribe-tel-field"  required>
           	<label for="subscribe-tel-field">Phone number</label>
 					</p>
          	<p>
-          	<input type="text" name="subscribe-login" id="subscribe-login-field">
+          	<input type="text" name="subscribe-login" id="subscribe-login-field" required>
           	<label for="subscribe-login-field">Envato username</label>
 					</p>
           <button class="btn" type="submit">Let me in!</button>
@@ -203,12 +203,12 @@
         	Check out the photos of our previous events where we rocked with a lot of Famous and enthusiatic authors! We’re always planning to make our future events feel fresh and fun to be at. :)
         </p>
         <section class="gellery">
-          <a class="wide high" href="#"><img src="" width="" height="" alt=""></a>
-					<a class="narrow high" href="#"><img src="" width="" height="" alt=""></a>
-					<a class="narrow low" href="#"><img src="" width="" height="" alt=""></a>
-					<a class="wide low" href="#"><img src="" width="" height="" alt=""></a>
+          <a href="#"><img class="wide high" src="" width="" height="" alt=""></a>
+					<a href="#"><img  class="narrow high" src="" width="" height="" alt=""></a>
+					<a href="#"><img class="narrow low" src="" width="" height="" alt=""></a>
+					<a href="#"><img class="wide low" src="" width="" height="" alt=""></a>
         </section>
-        <a class="btn">View more</a>
+        <a class="btn" href="#">View more</a>
       </section>
       
       <div class="map"></div>      
@@ -221,12 +221,12 @@
           <p class="contact-address">
             Lorem Ipsum Avenue, 420/2 elm street, Melbourne, Sydney - 2122, Kingdom of Australia
           </p>
-          <a href="#" class="btn">View map</a>
+					<button class="btn" type="button">View map</button>
         </div>
         <form class="form-message" action="" method="post">
-          <input type="email" name="form-message-email" id="message-email-field">
+          <input type="email" name="form-message-email" id="message-email-field" required>
           <label for="message-email-field">Enter your email</label>
-          <textarea name="message" id="message-field"></textarea>
+          <textarea name="message" id="message-field" required></textarea>
           <label for="message-field">Type your message</label>
           <button class="btn" type="submit">Send message</button>
         </form>              
