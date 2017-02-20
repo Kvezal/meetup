@@ -5,6 +5,9 @@ var rewardButton = reward.querySelector('.btn');
 var rewardText = reward.querySelectorAll('p');
 var speakers = document.querySelector('.speakers');
 
+var gelleryButton = document.querySelector('.past-events .btn');
+var gellery = document.querySelector('.gellery');
+
 var contact = document.querySelector('.main-footer .contact');
 var messageClose = contact.querySelector('.btn');
 var messageOpen = document.querySelector('.main-footer .btn');
@@ -31,6 +34,28 @@ toggle.addEventListener('click', function (event) {
     speakers.classList.remove('reward-speakers');
 	}
 });
+
+gelleryButton.addEventListener('click', function (event) {
+	event.preventDefault();
+	if(!gellery.classList.contains('show-gellery')) {
+		if(gellery.classList.contains('hide-gellery')) {
+				gellery.classList.remove('hide-gellery');
+        gellery.classList.add('show-gellery');
+		} else {
+        gellery.classList.add('show-gellery');					
+		}
+		gellery.classList.add('show-gellery');
+	} else {
+		gellery.classList.remove('show-gellery');
+		gellery.classList.add('hide-gellery');
+	}
+});
+
+
+
+
+
+
 
 messageClose.addEventListener('click', function (event) {
 	event.preventDefault();

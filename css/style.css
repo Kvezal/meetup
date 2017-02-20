@@ -880,12 +880,29 @@ font-family: 'Roboto Slab', serif;
 
 .gellery {
 	display: flex;
-	flex-wrap: wrap;
+	flex-wrap: wrap;	
+	height: 784px;
 	max-width: 100%;
-	min-height: 784px;
 	margin-bottom: 96px;
+	overflow: hidden;
 	
 	font-size: 0;
+}
+
+.hide-gellery {		
+	animation-name: hide-gellery;
+	animation-duration: .6s;
+	animation-timing-function: ease-in-out;
+	animation-fill-mode: forwards;
+}
+
+.show-gellery {	
+	overflow-y: scroll;
+	
+	animation-name: show-gellery;
+	animation-duration: .6s;
+	animation-timing-function: ease-in-out;
+	animation-fill-mode: forwards;
 }
 
 .gellery a {
@@ -934,6 +951,7 @@ font-family: 'Roboto Slab', serif;
 	color: #ffffff;
 	
 	background-color: #373737;
+	border: none;
 	border-radius: 15px;
 	opacity: 1;
 	
@@ -1251,3 +1269,23 @@ font-family: 'Roboto Slab', serif;
 	border-left: none;
 	transform: rotate(-45deg);
 }
+
+@keyframes show-gellery {
+	from {
+		height: 784px;
+	}
+	
+	to {
+		height: 1568px;
+	}
+}
+
+@keyframes hide-gellery {
+	from {
+		height: 1568px;
+	}
+	
+	to {
+		height: 784px;
+	}
+} 
