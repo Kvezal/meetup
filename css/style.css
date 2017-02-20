@@ -6,10 +6,7 @@ body {
 	background-color: #999999
 }
 
-body {
-	min-width: 1000px;
-	max-width: 1366px;
-  
+body {  
   font-weight: 300;
   font-size: 14px;
   line-height: 17px;
@@ -27,9 +24,11 @@ font-family: 'Roboto Slab', serif;
   flex-wrap: wrap;
 	justify-content: space-between;
 	align-items: center;
-	box-sizing: border-box;
-	width: 100%;
-	padding: 46px 10.8% 397px 12.45%;
+	box-sizing: border-box;	
+	min-width: 1000px;
+	max-width: 1366px;
+	margin: 0 auto;
+	padding: 46px 7.4% 397px 9%;
   
   background: #4a454b url(../img/groop-icon.png) no-repeat bottom 11px left 115px;
 }
@@ -94,13 +93,12 @@ font-family: 'Roboto Slab', serif;
 	
 	font-family: 'Roboto Slab', 'Times New Roman', serif;
 	color: #ffffff;
-	text-align: center;
 	
 	border: 2px solid #90d23d;
 	border-radius: 20px;
 }
 
-.time .clock {
+.clock {
 	width: 100%;
 	height: 118px;
 	
@@ -109,7 +107,7 @@ font-family: 'Roboto Slab', serif;
 	line-height: 130px;
 }
 
-.time .date {
+.date {
 	box-sizing: border-box;
 	width: 25%;
 	
@@ -119,10 +117,29 @@ font-family: 'Roboto Slab', serif;
 	text-transform: capitalize;
 }
 
+.days {
+	padding-left: 25px;
+}
+
+.hours {
+	padding-left: 35px;
+}
+
+.minutes {
+	padding-left: 35px;
+}
+
+.seconds {
+	padding-left: 50px;
+}
+
 .content {
 	display: flex;
 	flex-direction: column;
-	align-items: center;
+	align-items: center;	
+	min-width: 1000px;
+	max-width: 1366px;
+	margin: 0 auto;
 	margin-top: -315px;
 }
 
@@ -508,7 +525,7 @@ font-family: 'Roboto Slab', serif;
 .envato-elite {
 	position: absolute;
 	left: 12.45%;
-	bottom: -320px;
+	bottom: -330px;
 	z-index: 50;
 	
 	width: 328px;;
@@ -545,7 +562,7 @@ font-family: 'Roboto Slab', serif;
 .show-reward {  	
 	width: 100%;
   height: auto;
-	padding: 247px 12.15% 176px 39.1%;
+	padding: 247px 12.5% 176px 39.1%;
 	
   font-size: inherit;
 	text-align: right;
@@ -945,10 +962,11 @@ font-family: 'Roboto Slab', serif;
 }
 
 .past-events .btn {
-	padding: 20px 48px 19px 46px;
+	padding: 16px 48px 14px 43px;
 	
 	font-size: 22px;
 	color: #ffffff;
+	text-transform: capitalize;
 	
 	background-color: #373737;
 	border: none;
@@ -976,7 +994,7 @@ font-family: 'Roboto Slab', serif;
 .contact {
 	position: absolute;
 	top: -595px;
-	left: 14.66%;
+	right: 14.64%;
 	
 	display: flex;
 	flex-direction: row;
@@ -984,6 +1002,7 @@ font-family: 'Roboto Slab', serif;
 	align-items: center;
 	box-sizing: border-box;
 	width: 71%;
+	max-width: 970px;
 	height: 530px;
 	padding: 60px 5.2% 53px 7.31%;
 	
@@ -1151,8 +1170,10 @@ font-family: 'Roboto Slab', serif;
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
-	box-sizing: border-box;
-	width: 100%;
+	box-sizing: border-box;	
+	min-width: 1000px;
+	max-width: 1366px;
+	margin: 0 auto;
 	padding-top: 60px;
 	padding-bottom: 41px;
 	

@@ -51,12 +51,6 @@ gelleryButton.addEventListener('click', function (event) {
 	}
 });
 
-
-
-
-
-
-
 messageClose.addEventListener('click', function (event) {
 	event.preventDefault();
   contact.classList.add('hide');
@@ -68,8 +62,6 @@ messageOpen.addEventListener('click', function (event) {
 	contact.classList.remove('hide');
 	messageOpen.classList.remove('show-message-btn');
 });
-
-
 
 
 function digitalWatch() {
