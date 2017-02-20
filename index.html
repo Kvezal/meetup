@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body>
+  <body onload="digitalWatch()">
     <header class="main-header">
       <div class="logo">
         <img src="img/logo.png" width="230" height="62" alt="Envato Bangladesh">
@@ -16,24 +16,28 @@
       <nav class="main-navigation">             
         <ul class="site-navigation">
           <li class="nav-item">
-            <a class="nav-link" href="#">Event Details</a>
+            <a class="nav-link" href="#event-details">Event Details</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Speakers</a>
+            <a class="nav-link" href="#speakers">Speakers</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Sponsors</a>
+            <a class="nav-link" href="#sponsors">Sponsors</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Past events</a>
+            <a class="nav-link" href="#past-events">Past events</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
+            <a class="nav-link" href="#contact">Contact</a>
           </li>  
         </ul>        
       </nav>
-      <section class="timer">
-<!--        Таймер включающий в себя: дни, часы, минуты, секунды-->
+      <section class="time">
+      	<div class="clock"></div>
+      	<div class="date days">Days</div>  
+      	<div class="date hours">Hours</div>
+      	<div class="date minutes">Minutes</div>
+      	<div class="date seconds">Seconds</div>
       </section>
     </header>
     
@@ -101,7 +105,7 @@
         </div>        
       </section>
       
-      <section class="passage-events">
+      <section class="passage-events" id="event-details">
       	<table class="timetable">
       	  <tr>
       	    <th>Time</th>
@@ -149,7 +153,7 @@
       </section>
       
       <section class="speakers">
-        <h2 class="subtitle">Speakers</h2>
+        <h2 class="subtitle" id="speakers">Speakers</h2>
         <p class="speakers-text">
           Meet our Valuable speakers who will be each giving 10 minutes sessions on different subjects regarding being a digital product author, working at envato and marketing your business.<br>
           Hope you will have a great time listening to our presentations!
@@ -181,7 +185,7 @@
         </section> 
       </section>
       
-      <section class="sponsors">
+      <section class="sponsors" id="sponsors">
         <h2 class="subtitle">Sponsor Our Event!</h2>
         <p class="sponsors-text"> 
           If you want to help us making this event lively and successful, help us by sponsoring our event!<br>
@@ -196,9 +200,9 @@
           <li class="sponsor"><a href="#"><img src="img/sponsor-2.png" width="95" height="75" alt=""></a></li>
           <li class="sponsor"><a href="#"><img src="img/sponsor-3.png" width="153" height="28" alt=""></a></li>
         </ul>
-        <a href="#" class="btn">Sponsor us</a>
+        <a class="btn">Sponsor us</a>
       </section>
-      <section class="past-events">
+      <section class="past-events" id="past-events">
         <h2 class="subtitle">Past events</h2>
         <p class="past-events-text">
         	Check out the photos of our previous events where we rocked with a lot of Famous and enthusiatic authors! We’re always planning to make our future events feel fresh and fun to be at. :)
@@ -209,7 +213,7 @@
 					<a href="#"><img class="narrow low" src="" width="" height="" alt=""></a>
 					<a href="#"><img class="wide low" src="" width="" height="" alt=""></a>
         </section>
-        <a class="btn" href="#">View more</a>
+        <button class="btn" type="button">View more</button>
       </section>
       
       <div class="map"></div>      
@@ -217,7 +221,7 @@
     
     <footer class="main-footer">
       <a class="btn" href="">Write message</a>
-      <section class="contact">
+      <section class="contact" id="contact">
         <div class="contact-column-left">
           <p class="contact-address">
             Lorem Ipsum Avenue, 420/2 elm street, Melbourne, Sydney - 2122, Kingdom of Australia
@@ -230,7 +234,8 @@
           <textarea name="message" id="message-field" required></textarea>
           <label for="message-field">Type your message</label>
           <button class="btn" type="submit">Send message</button>
-        </form>              
+        </form> 
+				<div class="overlay"></div>             
       </section>
       <p class="footer-social">
 				<a href="#" class="social-btn social-btn-fb">Facebook</a>
@@ -245,6 +250,6 @@
       </p>  
       <a class="return" href="#">Up</a>
     </footer>
-    <script src="js/popup.js"></script>
+    <script src="js/scripts.js"></script>
   </body>  
 </html>

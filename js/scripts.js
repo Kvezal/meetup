@@ -5,6 +5,10 @@ var rewardButton = reward.querySelector('.btn');
 var rewardText = reward.querySelectorAll('p');
 var speakers = document.querySelector('.speakers');
 
+var contact = document.querySelector('.main-footer .contact');
+var messageClose = contact.querySelector('.btn');
+var messageOpen = document.querySelector('.main-footer .btn');
+
 toggle.addEventListener('click', function (event) {
   event.preventDefault();
   if (!reward.classList.contains('show-reward')) {
@@ -28,3 +32,30 @@ toggle.addEventListener('click', function (event) {
 	}
 });
 
+messageClose.addEventListener('click', function (event) {
+	event.preventDefault();
+  contact.classList.add('hide');
+  messageOpen.classList.add('show-message-btn');
+});
+
+messageOpen.addEventListener('click', function (event) {
+	event.preventDefault();
+	contact.classList.remove('hide');
+	messageOpen.classList.remove('show-message-btn');
+});
+
+
+
+
+function digitalWatch() {
+    var date = new Date();
+	  var days = date.getDate();
+    var hours = date.getHours();
+    var minutes = date.getMinutes();
+    var seconds = date.getSeconds();
+    if (hours < 10) hours = "0" + hours;
+    if (minutes < 10) minutes = "0" + minutes;
+    if (seconds < 10) seconds = "0" + seconds;
+    document.querySelector('.clock').innerHTML = days + " : " + hours + " : " + minutes + " : " + seconds;
+    setTimeout("digitalWatch()", 1000);
+}

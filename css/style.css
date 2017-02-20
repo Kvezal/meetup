@@ -81,12 +81,42 @@ font-family: 'Roboto Slab', serif;
 	box-shadow: 0 0 5px 3px #90d23d;
 }
 
-.timer {
+.time {
+	display: flex;
+	flex-wrap: wrap;
+	box-sizing: border-box;
 	width: 92.5%;
 	height: 198px;
 	margin-top: 118px;
 	margin-right: auto;
 	margin-left: auto;
+	padding: 7px 70px;
+	
+	font-family: 'Roboto Slab', 'Times New Roman', serif;
+	color: #ffffff;
+	text-align: center;
+	
+	border: 2px solid #90d23d;
+	border-radius: 20px;
+}
+
+.time .clock {
+	width: 100%;
+	height: 118px;
+	
+	font-weight: 100;
+	font-size: 130px;
+	line-height: 130px;
+}
+
+.time .date {
+	box-sizing: border-box;
+	width: 25%;
+	
+	font-weight: 400;
+	font-size: 25px;
+	line-height: 25px;
+	text-transform: capitalize;
 }
 
 .content {
@@ -575,6 +605,7 @@ font-family: 'Roboto Slab', serif;
 	min-height: 55px;	
 	
 	text-align: center;
+	text-decoration: none;
 	opacity: 0;
 }
 
@@ -814,6 +845,10 @@ font-family: 'Roboto Slab', serif;
 	text-transform: capitalize;
 	
 	background-color: #90d23d;
+	border-radius: 15px;
+	opacity: 1;
+	
+	transition-duration: .3s;
 }
 
 .past-events {
@@ -899,6 +934,18 @@ font-family: 'Roboto Slab', serif;
 	color: #ffffff;
 	
 	background-color: #373737;
+	border-radius: 15px;
+	opacity: 1;
+	
+	transition-duration: .3s;
+}
+
+.past-events .btn:hover {
+	background-color: #414127;
+}
+
+.past-events .btn:active {
+	background-color: #415b27;
 }
 
 .map {
@@ -923,6 +970,17 @@ font-family: 'Roboto Slab', serif;
 	padding: 60px 5.2% 53px 7.31%;
 	
 	background-color: #ffffff;
+	visibility: visible;
+	transform: scale(1);
+	opacity: 1;	
+	
+	transition: .6s;
+}
+
+.contact.hide {
+	visibility: hidden;
+	transform: scale(.01);
+	opacity: 0;	
 }
 
 .contact-column-left {
@@ -953,6 +1011,10 @@ font-family: 'Roboto Slab', serif;
 	
 	background-color: #90d23d;
 	border: none;
+	border-radius: 15px;
+	opacity: 1;
+	
+	transition: .3s;
 }
 
 .form-message {
@@ -1051,6 +1113,17 @@ font-family: 'Roboto Slab', serif;
 	border: none;
 	border-radius: 5px;
 	background-color: #373737;
+	opacity: 1;
+	
+	transition-duration: .3s;
+}
+
+.form-message .btn:hover {
+	background-color: #414127;
+}
+
+.form-message .btn:active {
+	background-color: #415b27;
 }
 
 .main-footer {
@@ -1071,7 +1144,7 @@ font-family: 'Roboto Slab', serif;
 .main-footer > .btn {
 	position: absolute;
 	top: -60px;
-	right: 195px;
+	right: 5px;
 	
 	padding: 18px 27px 19px 27px;
 	
@@ -1081,8 +1154,24 @@ font-family: 'Roboto Slab', serif;
 	text-transform: capitalize;
 	
 	background-color: #373737;
+	border-radius: 15px;
 	visibility: hidden;
 	opacity: 0;
+	
+	transition: .3s;
+}
+
+.main-footer > .btn:hover {
+	background-color: #414127;
+}
+
+.main-footer > .btn:active {
+	background-color: #415b27;
+}
+
+.main-footer .show-message-btn {
+	visibility: visible;
+	opacity: 1;
 }
 
 .footer-social {
