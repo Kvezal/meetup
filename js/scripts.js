@@ -65,14 +65,18 @@ messageOpen.addEventListener('click', function (event) {
 
 
 function digitalWatch() {
-    var date = new Date();
-	  var days = date.getDate();
-    var hours = date.getHours();
-    var minutes = date.getMinutes();
-    var seconds = date.getSeconds();
-    if (hours < 10) hours = "0" + hours;
-    if (minutes < 10) minutes = "0" + minutes;
-    if (seconds < 10) seconds = "0" + seconds;
-    document.querySelector('.clock').innerHTML = days + " : " + hours + " : " + minutes + " : " + seconds;
-    setTimeout("digitalWatch()", 1000);
+  var date = new Date();
+	var days = date.getDate();
+  var hours = date.getHours();
+  var minutes = date.getMinutes();
+  var seconds = date.getSeconds();
+	
+  if (hours < 10) hours = "0" + hours;
+  if (minutes < 10) minutes = "0" + minutes;
+  if (seconds < 10) seconds = "0" + seconds;
+  	document.querySelector('.days').innerHTML = days + " :";
+	document.querySelector('.hours').innerHTML = hours + " :";
+	document.querySelector('.minutes').innerHTML = minutes + " :";
+	document.querySelector('.seconds').innerHTML = seconds;
+  setTimeout("digitalWatch()", 1000);
 }
